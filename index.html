@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The City School - Matrículas</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+              <a href="index.html"> <img src="imagenes/logo.png" alt="The City School Logo" class="logo-img"></a> 
+                <h1>The City School</h1>
+            </div>
+            <nav class="nav">
+    <ul>
+        <li><a href="index.html" class="nav-link active">Inicio</a></li>
+        <li><a href="Pre matricula.html" class="nav-link">Pre matrícula</a></li>
+        <li><a href="matricula.html" class="nav-link">Matrícula</a></li>
+        <li><a href="Contactenos.html" class="nav-link">Contáctenos</a></li>
+    </ul>
+</nav>
+
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div id="home" class="page active">
+            <section class="hero">
+                <div class="hero-content">
+                    <h2>Dreams That Become Big</h2>
+                    <p>Educación de calidad para el futuro de tus hijos • Panamá</p>
+                    <a href="Pre matricula.html"  class="cta-button">Iniciar Pre-matrícula</a>
+                </div>
+            </section>
+
+            <section class="carousel-container">
+                <div class="carousel">
+                    <div class="carousel-slide active" style="background-image: url('imagenes/escena-edificio-escuela-grande_1.jpg');">
+                        <div class="carousel-content">
+                            <h3>Excelencia Académica</h3>
+                            <p>Programas educativos de alta calidad que preparan a nuestros estudiantes para el éxito.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide" style="background-image: url('https://i.imgur.com/image-slide2.jpg');">
+                        <div class="carousel-content">
+                            <h3>Instalaciones Modernas</h3>
+                            <p>Espacios equipados con tecnología de vanguardia para un aprendizaje integral.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide" style="background-image: url('https://i.imgur.com/image-slide3.jpg');">
+                        <div class="carousel-content">
+                            <h3>Formación Integral</h3>
+                            <p>Desarrollo académico, deportivo y artístico para formar ciudadanos íntegros.</p>
+                        </div>
+                    </div>
+                    <button class="carousel-nav prev" onclick="changeSlide(-1)">❮</button>
+                    <button class="carousel-nav next" onclick="changeSlide(1)">❯</button>
+                    <div class="carousel-dots">
+                        <span class="dot active" onclick="currentSlideManual(0)"></span>
+                        <span class="dot" onclick="currentSlideManual(1)"></span>
+                        <span class="dot" onclick="currentSlideManual(2)"></span>
+                    </div>
+                </div>
+              </section>
+
+            <section class="about">
+                <h3>Conócenos</h3>
+                                <div class="about-card" style="margin-bottom: 2rem;">
+                    <h4>Nuestra Misión</h4>
+                    <p> En The City School, nos comprometemos a ofrecer una educación integral y bilingüe que fomente el desarrollo académico, emocional y social de nuestros estudiantes. Desde 2018, hemos trabajado para crear un ambiente inclusivo y acogedor, donde cada niño, incluyendo aquellos con neurodiversidad, pueda florecer. A través de jornadas extendidas, proporcionamos oportunidades para el aprendizaje en deportes, cultura, artes y manejo de emociones, siempre guiados por nuestros valores cristianos. Nuestro lema, "sueños que se vuelven grandes", refleja nuestra dedicación a empoderar a nuestros estudiantes para que se conviertan en líderes responsables y compasivos en un mundo en constante cambio.</p>
+                </div>
+                <div class="about-card" style="margin-bottom: 2rem;">
+                    <h4>Nuestra Visión</h4>
+                    <p>Nuestra visión en The City School es ser reconocidos como un referente en educación integral y bilingüe en la comunidad, donde los valores cristianos y la inclusión son pilares fundamentales. Aspiramos a formar una generación de niños y niñas que, equipados con una sólida educación y habilidades emocionales, sean capaces de construir relaciones auténticas y utilizar la tecnología de manera positiva. Creemos en un futuro donde nuestros estudiantes no solo sean académicamente competentes, sino también seres humanos íntegros, listos para enfrentar los desafíos del mañana y contribuir al bienestar de la sociedad</p>
+                </div>
+                <div class="about-card" style="margin-bottom: 2rem;">
+                    <h4>Eventos</h4>
+                    <p>Vivimos una aventura inolvidable en el corazón del campo! En la Granja de Alicia, los niños tuvieron la oportunidad de sumergirse en un mundo lleno de vida, donde  interactuaron con adorables animales y aprendieron sobre la naturaleza de una manera divertida y educativa.
+
+                    Durante la visita, los pequeños exploradores acariciaron a los conejitos, alimentaron a las cabras, caballos, obejas, pollos y observarona las gallinas mientras ponen sus huevos. 
+
+                    La Granja de Alicia nos brindó, una oportunidad para conocer a los animales de cerca,  y un espacio para conectar con la naturaleza. Los niños  estuvieron en contacto con la  jardinería, y disfrutaron de  juegos al aire libre
+
+                    Con nuestros  apasionados maestros y un ambiente seguro y acogedor, esta experiencia   fomentó el amor por los seres vivos y el respeto por el medio ambiente.</p>
+                      <section class="event-carousel-container">
+        <div class="event-carousel js-flickity" data-flickity-options='{ "wrapAround": true, "autoPlay": 3000 }'>
+            <div class="carousel-cell">
+                <img src="ImgGranja/evento1.jpg" alt="Evento 1" />
+            </div>
+            <div class="carousel-cell">
+                <img src="ImgGranja/evento2.jpg" alt="Evento 2" />
+            </div>
+            <div class="carousel-cell">
+                <img src="imagenes/evento3.jpg" alt="Evento 3" />
+            </div>
+        </div>
+    </section>
+                </div>
+
+            </section>
+            </div>
+            
+        </div>
+        
+    </main>
+     <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <p>📍 Av. Principal #123, Ciudad</p>
+                <p>📞 (507) 6306-8517</p>
+                <p>✉️ info@escuelasanjose.edu.pa</p>
+            </div>
+            <div class="footer-section">
+                <h4>Horarios</h4>
+                <p>Lunes a Viernes: 7:30 AM - 12:00 PM</p>
+
+                <ul>
+                    <li>Maternal</li>
+                    <li>Pre Kinder</li>
+                    <li>Kinder</li>
+                </ul>
+                <p>Lunes a Viernes: 7:30 AM - 1:30 PM</p>
+                <ul>
+                    <li>Primaria</li>
+                </ul>
+                <p>Horario Educatio + Day Care: 6:00 AM - 5:45 PM</p>
+            </div>
+            <div class="footer-section">
+                <h4>Síguenos</h4>
+<a href="https://www.instagram.com/thecityschoolpanama/" target="_blank">
+    <img src="https://img.icons8.com/?size=100&id=32323&format=png&color=000000" alt="Instagram" ></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 The City School. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+      <!-- CSS Flickity -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css" />
+    <!-- Tu CSS separado -->
+    <link rel="stylesheet" href="css/carr.css" />
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="js/carrucel.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/forms.js"></script>
+    <script src="js/modal.js"></script>
+<!-- Modal para imagen ampliada -->
+<div id="modal" class="modal" style="display:none;">
+  <span id="modal-close" class="modal-close">&times;</span>
+  <img class="modal-content" id="modal-img" alt="Imagen ampliada" />
+</div>
+
+</body>
+</html>

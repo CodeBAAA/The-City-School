@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The City School - Carrusel de Eventos</title>
+
+    <!-- CSS Flickity -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css" />
+    <!-- Tu CSS separado -->
+    <link rel="stylesheet" href="css/carr.css" />
+</head>
+<body>
+
+    <section class="event-carousel-container">
+        <div class="event-carousel js-flickity" data-flickity-options='{ "wrapAround": true, "autoPlay": 3000 }'>
+            <div class="carousel-cell">
+                <img src="imagenes/evento1.jpg" alt="Evento 1" />
+            </div>
+            <div class="carousel-cell">
+                <img src="imagenes/evento2.jpg" alt="Evento 2" />
+            </div>
+            <div class="carousel-cell">
+                <img src="imagenes/evento3.jpg" alt="Evento 3" />
+            </div>
+        </div>
+    </section>
+
+    <!-- JS Flickity -->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+</body>
+</html>

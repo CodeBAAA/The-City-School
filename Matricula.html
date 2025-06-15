@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Matrícula - The City School</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+            <script src="js/script.js"></script>
+    <script type="text/javascript">
+        // Inicializa EmailJS con tu Public Key
+        // ¡REEMPLAZA "TU_PUBLIC_KEY_DE_EMAILJS" CON TU CLAVE PÚBLICA REAL!
+        // La encuentras en tu panel de control de EmailJS > Account > API Keys > Public Key
+        (function() {
+            emailjs.init("TU_PUBLIC_KEY_DE_EMAILJS"); // <-- ¡CAMBIA ESTO!
+        })();
+    </script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <a href="index.html"> <img src="imagenes/logo.png" alt="The City School Logo" class="logo-img"></a> 
+                <h1>The City School</h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="Pre matricula.html" class="nav-link">Pre matrícula</a></li>
+                    <li><a href="matricula.html" class="nav-link active">Matrícula</a></li>
+                    <li><a href="Contactenos.html" class="nav-link">Contáctenos</a></li> </ul>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="form-container">
+        <h2>Formulario de Matrícula</h2>
+        <form id="matricula-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="nombre-completo">Nombre Completo del Estudiante *</label>
+                    <input type="text" id="nombre-completo" name="nombre-completo" required>
+                </div>
+                <div class="form-group">
+                    <label for="cedula">Cédula/Documento de Identidad *</label>
+                    <input type="text" id="cedula" name="cedula" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="fecha-nac">Fecha de Nacimiento *</label>
+                    <input type="date" id="fecha-nac" name="fecha-nac" required>
+                </div>
+                <div class="form-group">
+                    <label for="genero">Género *</label>
+                    <select id="genero" name="genero" required>
+                        <option value="">Seleccionar</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="femenino">Femenino</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="grado-matricula">Grado a Matricular *</label>
+                <select id="grado-matricula" name="grado-matricula" required>
+                    <option value="">Seleccionar grado</option>
+                    <option value="preescolar">Preescolar</option>
+                    <option value="1ro">1ro Primaria</option>
+                    <option value="2do">2do Primaria</option>
+                    <option value="3ro">3ro Primaria</option>
+                    <option value="4to">4to Primaria</option>
+                    <option value="5to">5to Primaria</option>
+                    <option value="6to">6to Primaria</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="nombre-acudiente">Nombre del Acudiente *</label>
+                <input type="text" id="nombre-acudiente" name="nombre-acudiente" required>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="parentesco">Parentesco *</label>
+                    <select id="parentesco" name="parentesco" required>
+                        <option value="">Seleccionar</option>
+                        <option value="padre">Padre</option>
+                        <option value="madre">Madre</option>
+                        <option value="abuelo">Abuelo/a</option>
+                        <option value="tio">Tío/a</option>
+                        <option value="tutor">Tutor Legal</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="cedula-acudiente">Cédula del Acudiente *</label>
+                    <input type="text" id="cedula-acudiente" name="cedula-acudiente" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="telefono-acudiente">Teléfono del Acudiente *</label>
+                    <input type="tel" id="telefono-acudiente" name="telefono-acudiente" required>
+                </div>
+                <div class="form-group">
+                    <label for="email-acudiente">Correo del Acudiente *</label>
+                    <input type="email" id="email-acudiente" name="email-acudiente" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="direccion-completa">Dirección Completa *</label>
+                <input type="text" id="direccion-completa" name="direccion-completa" required>
+            </div>
+
+            <div class="form-group">
+                <label for="colegio-anterior">Colegio de Procedencia</label>
+                <input type="text" id="colegio-anterior" name="colegio-anterior">
+            </div>
+
+            <div class="form-group">
+                <label for="observaciones">Observaciones Médicas o Especiales</label>
+                <textarea id="observaciones" name="observaciones" rows="4" placeholder="Alergias, medicamentos, condiciones especiales, etc."></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Enviar Matrícula</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('matricula-form').addEventListener('submit', function(e) {
+            e.preventDefault(); // Evita el envío tradicional del formulario
+
+            // Recolecta los valores de los campos del formulario
+            const templateParams = {
+                'nombre-completo': document.getElementById('nombre-completo').value,
+                'cedula': document.getElementById('cedula').value,
+                'fecha-nac': document.getElementById('fecha-nac').value,
+                'genero': document.getElementById('genero').value,
+                'grado-matricula': document.getElementById('grado-matricula').value,
+                'nombre-acudiente': document.getElementById('nombre-acudiente').value,
+                'parentesco': document.getElementById('parentesco').value,
+                'cedula-acudiente': document.getElementById('cedula-acudiente').value,
+                'telefono-acudiente': document.getElementById('telefono-acudiente').value,
+                'email-acudiente': document.getElementById('email-acudiente').value,
+                'direccion-completa': document.getElementById('direccion-completa').value,
+                'colegio-anterior': document.getElementById('colegio-anterior').value,
+                'observaciones': document.getElementById('observaciones').value
+            };
+
+            // Envía el formulario usando EmailJS
+            // Usamos tu Service ID: "service_yatm0wt"
+            // Necesitarás crear una NUEVA plantilla para Matrícula y poner su ID aquí.
+            emailjs.send("service_yatm0wt", "ID_DE_TU_NUEVA_PLANTILLA_DE_MATRICULA", templateParams) // <-- ¡CAMBIA ESTO!
+                .then(function(response) {
+                    console.log('Matrícula enviada con éxito!', response.status, response.text);
+                    alert('¡Formulario de matrícula enviado exitosamente! Te contactaremos pronto.');
+                    document.getElementById('matricula-form').reset(); // Limpia el formulario
+                }, function(error) {
+                    console.error('Error al enviar la matrícula:', error);
+                    alert('Hubo un error al enviar tu formulario de matrícula. Por favor, inténtalo de nuevo.');
+                });
+        });
+    </script>
+</body>
+</html>
