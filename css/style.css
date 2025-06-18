@@ -58,19 +58,22 @@ body {
 /* Navigation */
 .nav ul {
     list-style: none;
-    display: flex;
-    gap: 2rem;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: flex; /* Permite que los elementos se coloquen en una fila */
+    gap: 1rem; /* Reduce el espacio entre los botones para que quepan mejor */
+    flex-wrap: wrap; /* Permite que los elementos salten a la siguiente línea si no hay espacio */
+    justify-content: center; /* Centra los botones horizontalmente */
+    padding: 0; /* Asegura que no haya padding extra que los empuje */
+    margin: 0; /* Asegura que no haya margen extra */
 }
 
 .nav a {
     color: white;
     text-decoration: none;
     font-weight: 500;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.8rem; /* Reduce ligeramente el padding horizontal para ahorrar espacio */
     border-radius: 25px;
     transition: all 0.3s ease;
+    white-space: nowrap; /* Evita que el texto del botón se rompa en varias líneas */
 }
 
 .nav a:hover {
@@ -86,7 +89,6 @@ body {
     border: 1px solid #ffeb3b;
     box-shadow: 0 2px 8px rgba(255,235,59,0.4);
 }
-
 /* Main Content */
 .main-content {
     min-height: calc(100vh - 120px);
@@ -103,21 +105,18 @@ body {
 
 /* Hero */
 .hero {
-    background: linear-gradient(rgba(30,136,229,0.8), rgba(21,101,192,0.8)), 
-                radial-gradient(circle at 20% 50%, #ffeb3b 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, #ffeb3b 0%, transparent 50%),
-                linear-gradient(135deg, #1D2F6F 0%, #1D2F6F 100%);
-    background-size: cover;
-    background-position: center;
-    height: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    position: relative;
-    overflow: hidden;
+  background-image: url('../imagendefondo/fondo.jpeg'); /* cambia la ruta según tu carpeta */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* o ajusta según tu diseño */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white; /* Asegura que el texto sea visible sobre la imagen */
 }
+
 
 .hero::before {
     content: '';
@@ -144,7 +143,7 @@ body {
 
 
 .hero-content p {
-    font-size: 1.2rem;
+    font-size: 60px;
     margin-bottom: 2rem;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
