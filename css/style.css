@@ -29,7 +29,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0 2rem;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
 }
 
 .logo {
@@ -58,22 +58,22 @@ body {
 /* Navigation */
 .nav ul {
     list-style: none;
-    display: flex; /* Permite que los elementos se coloquen en una fila */
-    gap: 1rem; /* Reduce el espacio entre los botones para que quepan mejor */
-    flex-wrap: wrap; /* Permite que los elementos salten a la siguiente línea si no hay espacio */
-    justify-content: center; /* Centra los botones horizontalmente */
-    padding: 0; /* Asegura que no haya padding extra que los empuje */
-    margin: 0; /* Asegura que no haya margen extra */
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
 }
 
 .nav a {
     color: white;
     text-decoration: none;
     font-weight: 500;
-    padding: 0.5rem 0.8rem; /* Reduce ligeramente el padding horizontal para ahorrar espacio */
+    padding: 0.5rem 0.8rem;
     border-radius: 25px;
     transition: all 0.3s ease;
-    white-space: nowrap; /* Evita que el texto del botón se rompa en varias líneas */
+    white-space: nowrap;
 }
 
 .nav a:hover {
@@ -89,6 +89,7 @@ body {
     border: 1px solid #ffeb3b;
     box-shadow: 0 2px 8px rgba(255,235,59,0.4);
 }
+
 /* Main Content */
 .main-content {
     min-height: calc(100vh - 120px);
@@ -105,45 +106,44 @@ body {
 
 /* Hero */
 .hero {
-  background-image: url('../imagendefondo/fondo.jpeg'); /* cambia la ruta según tu carpeta */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh; /* o ajusta según tu diseño */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white; /* Asegura que el texto sea visible sobre la imagen */
+    background-image: url('../imagendefondo/fondo.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative; /* Asegura que el pseudo-elemento se posicione correctamente */
 }
-
 
 .hero::before {
     content: '';
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
     background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><path d="M0,300 Q300,100 600,300 T1200,300 L1200,600 L0,600 Z" fill="%23ffeb3b" opacity="0.1"/></svg>') bottom/cover no-repeat;
+    z-index: 1; /* Asegura que la forma SVG esté detrás del contenido */
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 1000px; /* límite del ancho */
-    margin: 0 auto;     /* centrado horizontal */
-    padding: 0 1rem;    /* margen interno para que el texto no quede pegado */
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
-
 .hero-content h2 {
-    font-size: clamp(2rem, 6vw, 4rem); /* mínimo 2rem, ideal 6vw, máximo 4rem */
+    font-size: clamp(2rem, 6vw, 4rem);
     margin-bottom: 1rem;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     color: #ffeb3b;
 }
 
-
 .hero-content p {
-    font-size: 60px;
+    font-size: clamp(1.2rem, 3vw, 2rem); /* Ajuste para que el párrafo también sea responsive */
     margin-bottom: 2rem;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
@@ -330,6 +330,11 @@ body {
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
+.tour-description.visible, .ethnia-day.visible { /* Agregado para visibilidad */
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .tour-description h3, .ethnia-day h3 {
     color: #1D2F6F;
     margin-bottom: 20px;
@@ -346,7 +351,7 @@ body {
 
 .image-gallery {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Por defecto en columna para móviles */
     gap: 20px;
     align-items: center;
     margin-top: 30px;
@@ -441,7 +446,7 @@ body {
 
 /* Footer */
 .footer {
-      font-size: 1.1rem;
+    font-size: 1.1rem;
     background: linear-gradient(135deg, #1D2F6F 0%, #0d47a1 100%);
     color: white;
     padding: 3rem 2rem 1rem;
@@ -452,19 +457,19 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Reducido minmax */
     gap: 2rem;
 }
 
 .footer-section h4 {
-      font-size: 40px; /* Aumenta el tamaño general del texto del footer */
+    font-size: 1.8rem; /* Ajustado para pantallas más pequeñas */
     margin-bottom: 1rem;
     color: #ffeb3b;
     font-weight: 700;
 }
 
 .footer-section p {
-    font-size: 20px;
+    font-size: 0.95rem; /* Ajustado para pantallas más pequeñas */
     margin-bottom: 0.5rem;
 }
 
@@ -475,8 +480,8 @@ body {
 }
 
 .footer-section a img {
-    width: 40px;
-    height: 40px;
+    width: 35px; /* Reducido tamaño de iconos */
+    height: 35px;
     border-radius: 50%;
     background: #ffeb3b;
     padding: 5px;
@@ -495,13 +500,40 @@ body {
     padding-top: 2rem;
     border-top: 1px solid rgba(255,235,59,0.3);
     color: #e3f2fd;
+    font-size: 0.9rem; /* Ajustado para pantallas más pequeñas */
 }
 
-/* Responsivo */
+/* Responsive */
+@media (max-width: 1024px) {
+    .header-content, .carousel-container, .about, .form-container, .footer-content {
+        padding: 0 1rem; /* Más padding en los lados para tablets */
+    }
+
+    .hero-content h2 {
+        font-size: clamp(2rem, 8vw, 3.5rem);
+    }
+    .hero-content p {
+        font-size: clamp(1rem, 2.5vw, 1.8rem);
+    }
+
+    .carousel {
+        height: 350px; /* Un poco menos alto en tablets */
+    }
+
+    .about-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Más flexible en tablets */
+    }
+}
+
 @media (max-width: 768px) {
     .header-content {
         flex-direction: column;
         gap: 1rem;
+        text-align: center;
+    }
+
+    .logo {
+        justify-content: center; /* Centrar el logo en móvil */
     }
 
     .nav ul {
@@ -510,25 +542,140 @@ body {
         gap: 0.5rem;
     }
 
+    .nav a {
+        width: 80%; /* Botones de navegación más anchos */
+        text-align: center;
+    }
+
     .hero-content h2 {
-        font-size: 2rem;
+        font-size: 2.2rem;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+
+    .cta-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
     }
 
     .form-row {
         grid-template-columns: 1fr;
     }
 
+    .carousel {
+        height: 300px; /* Menos alto en móviles */
+    }
+
     .carousel-nav {
-        width: 40px;
-        height: 40px;
+        width: 35px;
+        height: 35px;
+        font-size: 1.2rem;
+    }
+
+    .carousel-content h3 {
         font-size: 1.5rem;
+    }
+
+    .carousel-content p {
+        font-size: 0.9rem;
+    }
+
+    .about h3, .tour-description h3, .ethnia-day h3 {
+        font-size: 2rem;
     }
 
     .tour-description, .ethnia-day {
         padding: 20px 15px;
     }
 
+    .image-gallery {
+        flex-direction: column; /* Asegura que las imágenes se apilen en móviles */
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr; /* Una columna en el footer para móviles */
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center; /* Centrar enlaces sociales */
+    }
+
+    .footer-section h4 {
+        font-size: 1.5rem;
+    }
+
+    .footer-section p, .footer-bottom {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content {
+        padding: 0 1rem;
+    }
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+
+    .nav a {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.6rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.8rem;
+    }
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+    .cta-button {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .carousel {
+        height: 250px; /* Aún más pequeño en móviles muy pequeños */
+    }
+
+    .carousel-content h3 {
+        font-size: 1.2rem;
+    }
+    .carousel-content p {
+        font-size: 0.8rem;
+    }
+
+    .about-card {
+        padding: 1.5rem;
+    }
+    .about-card h4 {
+        font-size: 1.1rem;
+    }
+    .about-card p {
+        font-size: 0.9rem;
+    }
+
     .tour-description h3, .ethnia-day h3 {
-        font-size: 2em;
+        font-size: 1.8rem;
+    }
+    .tour-description p, .ethnia-day p {
+        font-size: 0.9rem;
+    }
+
+    .form-container {
+        padding: 1.5rem;
+    }
+    .form-container h2 {
+        font-size: 1.5rem;
+    }
+    .form-group input, .form-group select, .form-group textarea {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+    .submit-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
     }
 }
