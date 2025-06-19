@@ -1,0 +1,206 @@
+ /* Tus estilos existentes... */
+        .special-subjects-content {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+
+        .special-subjects-content h2 {
+            font-size: 2.8rem;
+            color: #1D2F6F;
+            margin-bottom: 2.5rem;
+            text-shadow: 1px 1px 2px rgba(21,101,192,0.1);
+        }
+
+        .subject-section {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(30,136,229,0.08);
+            margin-bottom: 3rem;
+            text-align: left;
+            border-top: 4px solid #ffeb3b;
+        }
+
+        .subject-section h3 {
+            font-size: 2rem;
+            color: #1D2F6F;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .subject-section p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Clases para Flickity y para distinguirlas */
+        .event-carousel, .video-gallery {
+            margin-top: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .gallery-cell {
+            width: 80%; /* Ancho de las celdas del carrusel */
+            margin-right: 15px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            position: relative;
+            /* Añade cursor para indicar que es clickeable */
+            cursor: pointer;
+        }
+
+        .gallery-cell img, .gallery-cell video {
+            width: 100%;
+            height: 350px; /* Altura fija para las imágenes/videos */
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        .classes-section {
+            background: #e3f2fd; /* Un color de fondo suave */
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(30,136,229,0.08);
+            text-align: center;
+            margin-top: 4rem;
+            border-bottom: 4px solid #1D2F6F;
+        }
+
+        .classes-section h3 {
+            font-size: 2.2rem;
+            color: #1D2F6F;
+            margin-bottom: 1.5rem;
+        }
+
+        .classes-section p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #444;
+            max-width: 900px;
+            margin: 0 auto 2rem auto;
+        }
+
+        .classes-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .classes-list li {
+            background: #fff;
+            padding: 1.2rem 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1D2F6F;
+            border-left: 5px solid #ffeb3b;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .classes-list li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        /* Estilos del Modal */
+        .modal {
+            display: none; /* OCULTAR POR DEFECTO */
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            justify-content: center; /* Usamos flexbox para centrar el contenido */
+            align-items: center;
+        }
+
+        /* Contenedor flexible dentro del modal para imagen o video */
+        .modal-content-wrapper {
+            max-width: 90%;
+            max-height: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Aseguramos que la imagen/video dentro del modal se ajuste */
+        .modal-content-wrapper img,
+        .modal-content-wrapper video {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain; /* Asegura que el contenido se ajuste sin distorsionarse */
+            display: block; /* Elimina espacio extra debajo de elementos inline */
+        }
+
+        /* Estilos para el botón de cierre del modal (la "X") */
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .modal-close:hover,
+        .modal-close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Media Queries para Responsive Design */
+        @media (max-width: 768px) {
+            .special-subjects-content h2 {
+                font-size: 2.2rem;
+            }
+            .subject-section {
+                padding: 1.5rem;
+            }
+            .subject-section h3 {
+                font-size: 1.8rem;
+            }
+            .subject-section p {
+                font-size: 1rem;
+            }
+            .gallery-cell {
+                width: 95%; /* Ajusta el ancho en móviles */
+                margin-right: 0;
+            }
+            .gallery-cell img, .gallery-cell video {
+                height: 250px; /* Ajusta la altura en móviles */
+            }
+            .classes-section {
+                padding: 2rem;
+            }
+            .classes-list {
+                flex-direction: column;
+                align-items: center;
+            }
+        }

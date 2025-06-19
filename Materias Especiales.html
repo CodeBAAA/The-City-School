@@ -4,167 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The City School - Materias Especiales</title>
+
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/modal.css">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css" />
-    <style>
-        /* Estilos específicos para esta página (puedes moverlos a tu style.css si prefieres) */
-        .special-subjects-content {
-            max-width: 1200px;
-            margin: 4rem auto;
-            padding: 0 2rem;
-            text-align: center;
-        }
-
-        .special-subjects-content h2 {
-            font-size: 2.8rem;
-            color: #1D2F6F;
-            margin-bottom: 2.5rem;
-            text-shadow: 1px 1px 2px rgba(21,101,192,0.1);
-        }
-
-        .subject-section {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(30,136,229,0.08);
-            margin-bottom: 3rem;
-            text-align: left;
-            border-top: 4px solid #ffeb3b;
-        }
-
-        .subject-section h3 {
-            font-size: 2rem;
-            color: #1D2F6F;
-            margin-bottom: 1.5rem;
-            text-align: center;
-        }
-
-        .subject-section p {
-            font-size: 1.1rem;
-            line-height: 1.7;
-            color: #555;
-            margin-bottom: 1.5rem;
-        }
-
-        .carousel-gallery, .video-gallery {
-            margin-top: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        .gallery-cell {
-            width: 80%; /* Ancho de las celdas del carrusel */
-            margin-right: 15px;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            position: relative;
-        }
-
-        .gallery-cell img, .gallery-cell video {
-            width: 100%;
-            height: 350px; /* Altura fija para las imágenes/videos */
-            object-fit: cover;
-            display: block;
-        }
-
-        .gallery-caption {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(transparent, rgba(0,0,0,0.8));
-            color: white;
-            padding: 1rem;
-            text-align: center;
-            font-size: 1.1rem;
-        }
-
-        .classes-section {
-            background: #e3f2fd; /* Un color de fondo suave */
-            padding: 3rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(30,136,229,0.08);
-            text-align: center;
-            margin-top: 4rem;
-            border-bottom: 4px solid #1D2F6F;
-        }
-
-        .classes-section h3 {
-            font-size: 2.2rem;
-            color: #1D2F6F;
-            margin-bottom: 1.5rem;
-        }
-
-        .classes-section p {
-            font-size: 1.1rem;
-            line-height: 1.7;
-            color: #444;
-            max-width: 900px;
-            margin: 0 auto 2rem auto;
-        }
-
-        .classes-list {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .classes-list li {
-            background: #fff;
-            padding: 1.2rem 2rem;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #1D2F6F;
-            border-left: 5px solid #ffeb3b;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .classes-list li:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-        }
-
-        @media (max-width: 768px) {
-            .special-subjects-content h2 {
-                font-size: 2.2rem;
-            }
-            .subject-section {
-                padding: 1.5rem;
-            }
-            .subject-section h3 {
-                font-size: 1.8rem;
-            }
-            .subject-section p {
-                font-size: 1rem;
-            }
-            .gallery-cell {
-                width: 95%; /* Ajusta el ancho en móviles */
-                margin-right: 0;
-            }
-            .gallery-cell img, .gallery-cell video {
-                height: 250px; /* Ajusta la altura en móviles */
-            }
-            .classes-section {
-                padding: 2rem;
-            }
-            .classes-list {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-    </style>
 </head>
 <body>
     <header class="header">
         <div class="header-content">
             <div class="logo">
-                <a href="index.html"> <img src="imagenes/logo.png" alt="The City School Logo" class="logo-img"></a>
+                <a href="index.html">
+                    <img src="imagenes/logo.png" alt="The City School Logo" class="logo-img">
+                </a>
                 <h1>The City School</h1>
             </div>
             <nav class="nav">
@@ -204,21 +55,21 @@
                     <p>Además de los beneficios físicos, las actividades en la piscina fomentan la interacción social, la comunicación y la relajación. Es un ambiente estimulante que permite a los niños explorar nuevas sensaciones y superar desafíos en un entorno de apoyo.</p>
 
                     <h4>Galería de Imágenes (Piscina y Actividades)</h4>
-                    <div class="carousel-gallery main-carousel" data-flickity='{ "wrapAround": true, "autoPlay": true, "imagesLoaded": true }'>
+                    <div class="event-carousel main-carousel" data-flickity='{ "wrapAround": true, "autoPlay": true, "imagesLoaded": true }'>
                         <div class="gallery-cell">
-                            <img src="imagenes/piscina1.jpeg" alt="Niños en la piscina adaptada 1">
+                            <img src="imagenespiscina/piscina1.jpg" alt="Niños en la piscina adaptada 1" class="media-item" data-type="image">
                             <div class="gallery-caption">Clases de natación adaptadas.</div>
                         </div>
                         <div class="gallery-cell">
-                            <img src="imagenes/piscina2.jpeg" alt="Niños en la piscina adaptada 2">
+                            <img src="imagenespiscina/piscina2.jpg" alt="Niños en la piscina adaptada 2" class="media-item" data-type="image">
                             <div class="gallery-caption">Juegos acuáticos y terapia.</div>
                         </div>
                         <div class="gallery-cell">
-                            <img src="imagenes/piscina3.jpeg" alt="Niños en la piscina adaptada 3">
+                            <img src="imagenespiscina/piscina3.png" alt="Niños en la piscina adaptada 3" class="media-item" data-type="image">
                             <div class="gallery-caption">Explorando y aprendiendo en el agua.</div>
                         </div>
                         <div class="gallery-cell">
-                            <img src="imagenes/piscina4.jpeg" alt="Niños en la piscina adaptada 4">
+                            <img src="imagenespiscina/piscina4.jpg" alt="Niños en la piscina adaptada 4" class="media-item" data-type="image">
                             <div class="gallery-caption">Seguridad y diversión garantizadas.</div>
                         </div>
                     </div>
@@ -226,16 +77,15 @@
                     <h4>Videos de Actividades Acuáticas</h4>
                     <div class="video-gallery main-carousel" data-flickity='{ "wrapAround": true, "autoPlay": false, "imagesLoaded": true }'>
                         <div class="gallery-cell">
-                            <video controls muted playsinline poster="imagenes/video-thumbnail1.jpeg">
-                                <source src="videos/video_natacion1.mp4" type="video/mp4">
+                            <video controls muted playsinline class="media-item" data-type="video" data-src="videos de piscina/video_natacion1.mp4">
+                                <source src="videos de piscina/video_natacion1.mp4" type="video/mp4">
                                 Tu navegador no soporta el tag de video.
                             </video>
                             <div class="gallery-caption">Ejercicios de flotación y seguridad.</div>
                         </div>
-                       <iframe width="560" height="315" src="https://www.youtube.com/embed/SNPvxpmNYIk?si=HvLQ4X8N0R4cpeHT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         <div class="gallery-cell">
-                            <video controls muted playsinline poster="imagenes/video-thumbnail2.jpeg">
-                                <source src="videos/video_natacion2.mp4" type="video/mp4">
+                            <video controls muted playsinline class="media-item" data-type="video" data-src="videos de piscina/video_natacion2.mp4">
+                                <source src="videos de piscina/video_natacion2.mp4" type="video/mp4">
                                 Tu navegador no soporta el tag de video.
                             </video>
                             <div class="gallery-caption">Desarrollo de habilidades motoras finas.</div>
@@ -244,21 +94,19 @@
                 </div>
 
                 <div class="classes-section">
-                    <h3>Clases Especializadas para Niños con Capacidades Especiales</h3>
-                    <p>Además de las actividades acuáticas, ofrecemos un programa integral de clases diseñadas para abordar las necesidades específicas de cada niño. Nuestro enfoque multidisciplinario incluye:</p>
+                    <h3>Clases y Terapias Ofrecidas</h3>
+                    <p>Además de nuestras actividades acuáticas, ofrecemos una gama de clases y terapias especializadas para apoyar el desarrollo integral de cada niño.</p>
                     <ul class="classes-list">
-                        <li>Terapia Ocupacional</li>
-                        <li>Terapia del Lenguaje</li>
                         <li>Fisioterapia</li>
-                        <li>Educación Sensorial</li>
+                        <li>Terapia Ocupacional</li>
+                        <li>Logopedia (Terapia del Lenguaje)</li>
+                        <li>Psicomotricidad</li>
+                        <li>Musicoterapia</li>
+                        <li>Arte Terapia</li>
+                        <li>Terapia Asistida con Animales</li>
                         <li>Apoyo Pedagógico Individualizado</li>
-                        <li>Habilidades Sociales y Comunicación</li>
-                        <li>Música y Expresión Artística</li>
-                        <li>Desarrollo de Habilidades de Vida Diaria</li>
                     </ul>
-                    <p>Cada programa es personalizado, trabajando en estrecha colaboración con las familias para garantizar el progreso y bienestar de los estudiantes.</p>
                 </div>
-
             </section>
         </div>
     </main>
@@ -288,7 +136,7 @@
             <div class="footer-section">
                 <h4>Síguenos</h4>
                 <a href="https://www.instagram.com/thecityschoolpanama/" target="_blank">
-                    <img src="https://img.icons8.com/?size=100&id=32323&format=png&color=000000" alt="Instagram" >
+                    <img src="https://img.icons8.com/?size=100&id=32323&format=png&color=000000" alt="Instagram">
                 </a>
             </div>
         </div>
@@ -297,27 +145,18 @@
         </div>
     </footer>
 
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-    <script>
-        // Inicializar Flickity en los carruseles
-        document.addEventListener('DOMContentLoaded', function() {
-            var carousels = document.querySelectorAll('.main-carousel');
-            carousels.forEach(function(carousel) {
-                new Flickity(carousel, {
-                    // opciones de Flickity
-                    wrapAround: true,
-                    autoPlay: 3000, // Reproducción automática cada 3 segundos
-                    imagesLoaded: true,
-                    prevNextButtons: true,
-                    pageDots: true
-                });
-            });
-        });
-    </script>
-    <div id="modal" class="modal" style="display:none;">
-        <span id="modal-close" class="modal-close">×</span>
-        <img class="modal-content" id="modal-img" alt="Imagen ampliada" />
+    <div id="mediaModal" class="modal">
+        <span id="closeMediaModal" class="modal-close">×</span>
+        <div class="modal-content-wrapper">
+            </div>
     </div>
 
+    <a href="https://wa.me/50763068517?text=Hola,%20me%20interesa%20hacer%20una%20pregunta%20de la matricula%20"
+        target="_blank" rel="noopener noreferrer" class="whatsapp-float-button">
+        <img src="icono/whatsapp.png" alt="WhatsApp Icon">
+    </a>
+
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="js/modal.js"></script>
 </body>
 </html>
