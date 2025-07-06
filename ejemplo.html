@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mostrar Imagen Local</title>
+</head>
+<body>
+  <div id="evento"></div>
+
+  <script>
+    const evento = {
+      title: "Festival de Ciencias",
+      images: [
+        "images/fondo.jpg"  // Imagen local
+      ],
+    };
+
+    document.getElementById("evento").innerHTML = `
+      <h2>${evento.title}</h2>
+      <div>
+        ${evento.images.map(img => `<img src="${img}" width="600">`).join('')}
+      </div>
+    `;
+  </script>
+</body>
+</html>
