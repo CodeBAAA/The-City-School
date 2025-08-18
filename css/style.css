@@ -156,7 +156,7 @@ body {
 
 /* Hero */
 .hero {
-    background-image: url('../imagendefondo/fondo.jpg');
+    background-image: url('../imagendefondo/fondo2.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -173,7 +173,6 @@ body {
     content: '';
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><path d="M0,300 Q300,100 600,300 T1200,300 L1200,600 L0,600 Z" fill="%23ffeb3b" opacity="0.1"/></svg>') bottom/cover no-repeat;
     z-index: 1;
 }
 
@@ -832,4 +831,132 @@ body {
 .whatsapp-float-button img {
     width: 55px; /* Agrandado de 45px a 55px */
     height: 55px; /* Agrandado de 45px a 55px */
+}
+/* --- Sección Promoción Prematrícula (mejorada) --- */
+.promo {
+  background: linear-gradient(135deg, #f6f9ff, #e6efff);
+  padding: 3rem 1.5rem;
+  border-radius: 15px;
+  margin: 2rem auto;
+  max-width: 1200px; /* igual al resto */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.promo-container {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr; /* texto más ancho que imágenes */
+  gap: 2rem;
+  align-items: center;
+}
+
+.promo-badge {
+  display: inline-block;
+  background: #ffeb3b;
+  color: #1D2F6F;
+  font-weight: 800;
+  border-radius: 9999px;
+  padding: 0.25rem 0.75rem;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 2px 8px rgba(255,235,59,0.35);
+}
+
+.promo-text h2 {
+  color: #1D2F6F;
+  font-size: clamp(1.8rem, 3vw, 2.2rem);
+  margin-bottom: 0.75rem;
+}
+
+.promo-text p {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  color: #333;
+}
+
+.promo-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1rem 0 0.5rem;
+}
+
+.cta-secondary {
+  display: inline-block;
+  padding: 0.85rem 1.2rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  font-weight: 700;
+  border: 2px solid #1D2F6F;
+  color: #1D2F6F;
+  transition: all .2s ease;
+}
+.cta-secondary:hover { transform: translateY(-2px); background: rgba(29,47,111,.06); }
+
+.cta-whatsapp {
+  display: inline-block;
+  padding: 0.85rem 1.2rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  font-weight: 700;
+  background: #25D366;
+  color: #fff;
+  transition: transform .2s ease, box-shadow .2s ease;
+  box-shadow: 0 6px 16px rgba(37,211,102,0.35);
+}
+.cta-whatsapp:hover { transform: translateY(-2px); }
+
+.promo-highlights {
+  list-style: none;
+  margin: 0.75rem 0 0;
+  padding: 0;
+  color: #2f3b66;
+}
+.promo-highlights li { margin: 0.25rem 0; }
+
+/* Galería de flyers */
+.promo-gallery {
+  width: 100%;
+}
+.promo-gallery .carousel-cell {
+  width: 100%;
+}
+.promo-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+  display: block;
+}
+
+/* Dots de Flickity más visibles sobre fondo claro */
+.flickity-page-dots .dot {
+  background: rgba(29,47,111,.25);
+  border: 1px solid rgba(29,47,111,.35);
+}
+.flickity-page-dots .dot.is-selected {
+  background: #ffeb3b;
+  border-color: #ffeb3b;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .promo-container { grid-template-columns: 1fr; }
+  .promo { padding: 2.2rem 1.25rem; }
+}
+@media (max-width: 480px) {
+  .promo-actions a { width: 100%; text-align: center; }
+}
+
+/* Contenedor de anuncios (apila varios) */
+.ads-section{
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+.ads-section .promo{ margin-bottom: 1.5rem; }
+.ads-section .promo:last-child{ margin-bottom: 0; }
+
+/* (Reutiliza tu CSS existente de .promo y .promo-container) */
+/* Si quieres compactar la altura cuando haya muchos anuncios: */
+@media (max-width: 1024px){
+  .ads-section .promo{ padding: 2.2rem 1.25rem; }
 }

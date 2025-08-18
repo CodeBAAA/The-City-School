@@ -3,33 +3,31 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: "1",
             title: "Etnia negra",
-
-// Ahora, utilizando un template literal (con backticks ` `):
-description: `En nuestra escuela, celebramos el Día de la Etnia Negra en Panamá, un momento especial para aprender y reconocer los valiosos aportes de la comunidad afrodescendiente a nuestra cultura y sociedad. Durante la jornada, los niños disfrutaron de una deliciosa variedad de comidas típicas que reflejan la rica gastronomía afroantillana, como las torrejitas de bacalao, los patacones, las carimañolas y muchas ricuras más!
+            description: `En nuestra escuela, celebramos el Día de la Etnia Negra en Panamá, un momento especial para aprender y reconocer los valiosos aportes de la comunidad afrodescendiente a nuestra cultura y sociedad. Durante la jornada, los niños disfrutaron de una deliciosa variedad de comidas típicas que reflejan la rica gastronomía afroantillana, como las torrejitas de bacalao, los patacones, las carimañolas y muchas ricuras más!
 
 Además, vimos películas que nos ayudaron a comprender mejor la historia y las tradiciones de la etnia negra en Panamá, ampliando nuestros conocimientos y apreciación por su legado. A través de actividades interactivas y charlas, los estudiantes aprendieron sobre la música, la danza y las costumbres que han enriquecido nuestra identidad panameña.
 
-Fue un día lleno de aprendizaje, diversión y orgullo, donde celebramos la diversidad y la importancia de cada cultura en nuestro país. ¡Juntos, seguimos construyendo un futuro inclusivo y respetuoso!`,            date: "2025-06-14",
+Fue un día lleno de aprendizaje, diversión y orgullo, donde celebramos la diversidad y la importancia de cada cultura en nuestro país. ¡Juntos, seguimos construyendo un futuro inclusivo y respetuoso!`,
+            date: "2025-06-14",
             time: "09:00 AM",
             location: "Laboratorio Principal",
             participants: 120,
             images: [
                 { type: "image", src: "../images/Etnianegra/Etnia1.jpg" },
-                { type: "image", src: "../images/Etnianegra/Etnia2.jpg" }, // Asumiendo que esta también es local
+                { type: "image", src: "../images/Etnianegra/Etnia2.jpg" },
                 { type: "image", src: "../images/Etnianegra/Etnia3.jpg" },
                 { type: "image", src: "../images/Etnianegra/Etnia4.jpg" },
                 { type: "image", src: "../images/Etnianegra/Etnia5.jpg" },
                 { type: "image", src: "../images/Etnianegra/Etnia6.jpg" },
                 { type: "image", src: "../images/Etnianegra/Etnia7.jpg" },
                 { type: "image", src: "../images/Etnianegra/Etnia8.jpg" },
-
             ],
             category: "Académico",
         },
         {
             id: "2",
             title: "Docencias para Maestros",
-            description: "Competencia deportiva entre todas las aulas de la institución. Incluyó fútbol, básquet, vóley y atletismo. Gran participación y espíritu deportivo.",
+            description: `En nuestra institución capacitamos a nuestro personal en áreas del desarrollo de la inteligencia emocional, para ofrecer a nuestros alumnos un ambiente que no solo fomente la educación participativa si no también el bienestar y manejo de las emociones .`,
             date: "2025-06-21",
             time: "02:00 PM",
             location: "Cancha Deportiva",
@@ -42,23 +40,9 @@ Fue un día lleno de aprendizaje, diversión y orgullo, donde celebramos la dive
             ],
             category: "Deportivo",
         },
+       
         {
             id: "3",
-            title: "Día del Arte y Creatividad",
-            description: "Exhibición de obras de arte, manualidades y presentaciones de talentos artísticos de los estudiantes. Un espacio para la expresión y la imaginación.",
-            date: "2024-04-20",
-            time: "10:00 AM",
-            location: "Salón de Usos Múltiples",
-            participants: 80,
-            images: [
-                { type: "image", src: "https://via.placeholder.com/600x400?text=Art+Day+1" },
-                { type: "image", src: "https://via.placeholder.com/600x400?text=Art+Day+2" },
-                { type: "image", src: "https://via.placeholder.com/600x400?text=Art+Day+3" },
-            ],
-            category: "Cultural",
-        },
-        {
-            id: "4",
             title: "Cierre de la semana de la educación inicial",
             description: "Una caminata por senderos naturales para promover la conciencia ambiental y el ejercicio al aire libre. Aprendizaje sobre flora y fauna local.",
             date: "2024-05-05",
@@ -72,21 +56,34 @@ Fue un día lleno de aprendizaje, diversión y orgullo, donde celebramos la dive
                 { type: "image", src: "../images/cierre de semana/cierre4.jpg" },
                 { type: "image", src: "../images/cierre de semana/cierre5.jpg" },
                 { type: "image", src: "../images/cierre de semana/cierre6.jpg" },
-                { type: "video", src: "../videos/cierre video1.mp4" }, // ¡Ruta del video corregida!
+                { type: "video", src: "../videos/cierre video1.mp4" },
             ],
             category: "Social",
+        },
+         {
+            id: "4",
+            title: "Gira a Panamá la Vieja hoy 15 de agosto de 2025 hoy en la celebración de sus 506 años",
+            description: "Los niños aprendieron la historia contada de una manera divertida a través de títeres y obra teatral.",
+            date: "2024-04-20",
+            time: "10:00 AM",
+            location: "Salón de Usos Múltiples",
+            participants: 80,
+            images: [
+                { type: "image", src: "../images/Panama la vieja/panama la vieja 1.jpg" },
+                { type: "image", src: "../images/Panama la vieja/panama la vieja 2.jpg" },
+                { type: "image", src: "../images/Panama la vieja/panama la vieja 3.jpg" },
+                { type: "image", src: "../images/Panama la vieja/panama la vieja 4.jpg" },
+                { type: "image", src: "../images/Panama la vieja/panama la vieja 5.jpg" },
+                { type: "image", src: "../images/Panama la vieja/panama la vieja 6.jpg" },
+                { type: "image", src: "../images/Panama la vieja/panama la vieja 7.jpg" },
+            ],
+            category: "Cultural",
         },
     ];
 
     let currentActivities = [...activities];
-    const currentImageIndex = {}; // To store the current image/video index for each activity
+    const currentImageIndex = {};
     const activitiesList = document.getElementById('activitiesList');
-    const newActivityForm = document.getElementById('newActivityForm');
-    const toggleFormButton = document.getElementById('toggleFormButton');
-    const activityForm = document.getElementById('activityForm');
-    const cancelFormButton = document.getElementById('cancelFormButton');
-    const imageFieldsContainer = document.getElementById('imageFieldsContainer'); // Renombrado a 'mediaFieldsContainer' sería más preciso pero mantenemos el nombre por compatibilidad
-    const addImageFieldButton = document.getElementById('addImageFieldButton'); // Renombrado a 'addMediaFieldButton' sería más preciso
     const noActivitiesMessage = document.getElementById('noActivitiesMessage');
 
     // Función para precargar medios (solo imágenes, videos se manejan al crear el elemento)
@@ -96,7 +93,6 @@ Fue un día lleno de aprendizaje, diversión y orgullo, donde celebramos la dive
                 const img = new Image();
                 img.src = media.src;
             }
-            // Los videos no se "precargan" de la misma manera que las imágenes
         });
     }
 
@@ -142,7 +138,6 @@ Fue un día lleno de aprendizaje, diversión y orgullo, donde celebramos la dive
                 } else if (currentMedia.type === "video") {
                     mediaHTML = `<video src="${currentMedia.src}" controls loop muted autoplay class="object-cover activity-media" data-activity-id="${activity.id}" style="width: 100%; height: 100%; object-fit: cover;"></video>`;
                 }
-
 
                 activityCard.innerHTML = `
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
@@ -242,7 +237,7 @@ Fue un día lleno de aprendizaje, diversión y orgullo, donde celebramos la dive
             newMediaElement.controls = true;
             newMediaElement.loop = true;
             newMediaElement.muted = true;
-            newMediaElement.autoplay = true; // Autoplay, pero puede ser bloqueado por el navegador
+            newMediaElement.autoplay = true;
         }
 
         newMediaElement.classList.add('object-cover', 'activity-media');
@@ -291,109 +286,6 @@ Fue un día lleno de aprendizaje, diversión y orgullo, donde celebramos la dive
                 updateActivityImage(activityId, newIndex);
             }
         }
-    });
-
-    // Toggle form visibility
-    toggleFormButton.addEventListener('click', () => {
-        if (activityForm.style.display === 'none' || activityForm.style.display === '') {
-            activityForm.style.display = 'block';
-        } else {
-            activityForm.style.display = 'none';
-        }
-    });
-
-    // Cancel form button
-    cancelFormButton.addEventListener('click', () => {
-        activityForm.style.display = 'none';
-        newActivityForm.reset();
-        // Restablece el contenedor de campos de medios
-        imageFieldsContainer.innerHTML = `
-            <div class="flex gap-2 mt-2 items-center">
-                <select class="media-type-select p-2 border border-gray-300 rounded-md">
-                    <option value="image">Imagen</option>
-                    <option value="video">Video</option>
-                </select>
-                <input type="url" class="media-url-input flex-grow p-2 border border-gray-300 rounded-md" placeholder="URL del medio (imagen o video)">
-            </div>
-        `;
-    });
-
-    // Add media field
-    addImageFieldButton.addEventListener('click', () => {
-        const newMediaField = document.createElement('div');
-        newMediaField.classList.add('flex', 'gap-2', 'mt-2', 'items-center');
-        newMediaField.innerHTML = `
-            <select class="media-type-select p-2 border border-gray-300 rounded-md">
-                <option value="image">Imagen</option>
-                <option value="video">Video</option>
-            </select>
-            <input type="url" class="media-url-input flex-grow p-2 border border-gray-300 rounded-md" placeholder="URL del medio (imagen o video)">
-            <button type="button" class="btn btn-outline remove-media-field p-2 bg-red-100 text-red-700 rounded-md hover:bg-red-200">
-                Eliminar
-            </button>
-        `;
-        imageFieldsContainer.appendChild(newMediaField);
-    });
-
-    // Remove media field
-    imageFieldsContainer.addEventListener('click', (e) => {
-        if (e.target.classList.contains('remove-media-field')) {
-            e.target.closest('.flex.gap-2.mt-2').remove();
-        }
-    });
-
-    // Handle form submission
-    newActivityForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-
-        const title = document.getElementById('title').value;
-        const description = document.getElementById('description').value;
-        const date = document.getElementById('date').value;
-        const time = document.getElementById('time').value;
-        const location = document.getElementById('location').value;
-        const participants = document.getElementById('participants').value;
-        const category = document.getElementById('category').value;
-
-        const mediaInputs = document.querySelectorAll('#imageFieldsContainer > div');
-        const images = Array.from(mediaInputs)
-            .map(div => {
-                const type = div.querySelector('.media-type-select').value;
-                const src = div.querySelector('.media-url-input').value.trim();
-                return src ? { type, src } : null;
-            })
-            .filter(media => media !== null);
-
-        if (images.length === 0) {
-            images.push({ type: "image", src: "https://via.placeholder.com/600x400?text=No+Media" });
-        }
-
-        const newActivity = {
-            id: Date.now().toString(),
-            title,
-            description,
-            date,
-            time,
-            location,
-            participants: parseInt(participants),
-            images, // Ahora images es un array de objetos {type, src}
-            category,
-        };
-
-        currentActivities.push(newActivity);
-        preloadMedia(newActivity.images); // Precargar medios de la nueva actividad
-        renderActivities();
-        newActivityForm.reset();
-        activityForm.style.display = 'none';
-        // Restablece el contenedor de campos de medios
-        imageFieldsContainer.innerHTML = `
-            <div class="flex gap-2 mt-2 items-center">
-                <select class="media-type-select p-2 border border-gray-300 rounded-md">
-                    <option value="image">Imagen</option>
-                    <option value="video">Video</option>
-                </select>
-                <input type="url" class="media-url-input flex-grow p-2 border border-gray-300 rounded-md" placeholder="URL del medio (imagen o video)">
-            </div>
-        `;
     });
 
     // Initial render

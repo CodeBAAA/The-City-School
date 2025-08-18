@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The City School - Matrículas</title>
-    <link rel="stylesheet" href="css/style.css">
+  <title>The City School - Matrículas</title>
+<link rel="icon" href="imagenes/logo.png" type="image/png">
+<link rel="icon" href="/favicon.ico">
+
+<link rel="stylesheet" href="css/style.css">
     <script src="js/hamburguesa.js"></script>
 </head>
 <body>
@@ -76,6 +79,86 @@
                     </div>
                 </div>
               </section>
+<!-- ===================== ANUNCIOS / PROMOCIONES ===================== -->
+<section id="anuncios" class="ads-section" aria-label="Anuncios y promociones">
+
+  <!-- Anuncio 1: Prematrícula 2026 -->
+  <article class="promo ad" data-start="2025-08-01" data-end="2025-09-30" aria-labelledby="promo-prematricula">
+    <div class="promo-container">
+      <div class="promo-text">
+        <span class="promo-badge">Agosto & Septiembre</span>
+        <h2 id="promo-prematricula">🎉 ¡Prematrícula Abierta!</h2>
+        <p>Durante los meses de <strong>agosto y septiembre</strong> aprovecha nuestros
+          <strong>precios especiales</strong> para el año <strong>2026</strong>.
+        </p>
+        <p>✨ Además, descubre nuestra <strong>nueva sede campestre</strong> con más espacios verdes
+          y actividades al aire libre.
+        </p>
+
+        <div class="promo-actions">
+          <a href="Pre matricula.html" class="cta-button">Inicia tu Pre-Matrícula</a>
+          <a class="cta-secondary" href="https://maps.app.goo.gl/JvguyAXR2Uk71StTA" target="_blank" rel="noopener">
+            Ver sede campestre
+          </a>
+          <a class="cta-whatsapp"
+             href="https://wa.me/50763068517?text=Hola,%20quiero%20info%20de%20Prematr%C3%ADcula%202026%20y%20la%20sede%20campestre%20"
+             target="_blank" rel="noopener">
+            Consultar por WhatsApp
+          </a>
+        </div>
+
+        <ul class="promo-highlights">
+          <li>✔️ Cupos limitados por grado</li>
+          <li>✔️ Descuentos aplican a nuevas inscripciones y reingresos</li>
+          <li>✔️ Jornada extendida y programas deportivos/artísticos</li>
+        </ul>
+      </div>
+
+      <!-- Carrusel de flyers -->
+      <div class="promo-gallery js-flickity"
+           data-flickity-options='{"wrapAround": true, "autoPlay": 3500, "pageDots": true, "prevNextButtons": false, "imagesLoaded": true}'>
+        <div class="carousel-cell">
+          <img class="zoomable" src="imagenes/flyers/prematricula1.jpg" alt="Flyer Prematrícula 2026 - Descuento" loading="lazy">
+        </div>
+        <div class="carousel-cell">
+          <img class="zoomable" src="imagenes/flyers/prematricula2.jpg" alt="Flyer Nueva sede campestre" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- Anuncio 2: Nueva sede campestre (ejemplo) -->
+  <article class="promo ad" data-start="2025-08-01" data-end="2025-12-31" aria-labelledby="promo-sede">
+    <div class="promo-container">
+      <div class="promo-text">
+        <span class="promo-badge">Nuevo</span>
+        <h2 id="promo-sede">🌿 ¡Conoce nuestra nueva sede campestre!</h2>
+        <p>Más áreas verdes, granja educativa y espacios para deportes y artes.</p>
+        <div class="promo-actions">
+          <a href="Contactenos.html" class="cta-button">Agenda una visita</a>
+          <a class="cta-secondary" href="https://maps.app.goo.gl/JvguyAXR2Uk71StTA" target="_blank" rel="noopener">Cómo llegar</a>
+        </div>
+      </div>
+
+      <div class="promo-gallery js-flickity"
+           data-flickity-options='{"wrapAround": true, "autoPlay": 4000, "pageDots": true, "prevNextButtons": false, "imagesLoaded": true}'>
+        <div class="carousel-cell"><img class="zoomable" src="imagenes/flyers/sede1.jpg" alt="Áreas verdes de la sede campestre" loading="lazy"></div>
+        <div class="carousel-cell"><img class="zoomable" src="imagenes/flyers/sede2.jpg" alt="Granja educativa" loading="lazy"></div>
+      </div>
+    </div>
+  </article>
+
+  <!-- (Ejemplo opcional) Anuncio 3: Campamento -->
+  <!--
+  <article class="promo ad" data-start="2025-11-15" data-end="2026-01-15" aria-labelledby="promo-campamento">
+    ...
+  </article>
+  -->
+
+</section>
+<!-- ===================== /ANUNCIOS ===================== -->
+
+
 
             <section class="about">
                 <h3>Conócenos</h3>
@@ -105,7 +188,7 @@
                 <img src="ImgGranja/evento2.jpg" alt="Evento 2" />
             </div>
             <div class="carousel-cell">
-                <img src="imagenes/evento3.jpg" alt="Evento 3" />
+                <img src="ImgGranja/evento3.jpg" alt="Evento 3" />
             </div>
         </div>
     </section>
@@ -146,7 +229,7 @@
                 <h4>Contacto</h4>
                 <p>📍 Av. Principal #123, Ciudad</p>
                 <p>📞 (507) 6306-8517</p>
-                <p>✉️ info@escuelasanjose.edu.pa</p>
+                <p>✉️ info@thecityschool.edu.pa</p>
             </div>
             <div class="footer-section">
                 <h4>Horarios</h4>
@@ -196,5 +279,22 @@
    target="_blank" rel="noopener noreferrer" class="whatsapp-float-button">
     <img src="icono/whatsapp.png" alt="WhatsApp Icon">
 </a>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const today = new Date();
+
+  document.querySelectorAll('#anuncios .ad').forEach(ad => {
+    const start = ad.dataset.start ? new Date(ad.dataset.start + 'T00:00:00') : null;
+    const end   = ad.dataset.end   ? new Date(ad.dataset.end   + 'T23:59:59') : null;
+
+    const isActive = (!start || today >= start) && (!end || today <= end);
+    if (!isActive) {
+      // Ocúltalo si está fuera de vigencia (puedes usar remove() si prefieres)
+      ad.style.display = 'none';
+    }
+  });
+});
+</script>
+
 </body>
 </html>
